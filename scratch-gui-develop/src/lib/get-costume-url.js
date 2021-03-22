@@ -1,6 +1,6 @@
 import storage from './storage';
 import {inlineSvgFonts} from 'scratch-svg-renderer';
-
+import ConfigServer from '../config_server';
 // Contains 'font-family', but doesn't only contain 'font-family="none"'
 const HAS_FONT_REGEXP = 'font-family(?!="none")';
 
@@ -31,7 +31,12 @@ const getCostumeUrl = (function () {
         }
 
         //cachedUrl = "https://www.transparentpng.com/thumb/animation/human-animation-png-5.png";
-        return "http://192.168.2.206:3000/api/tasks";
+       // return `${this.assetHost}/api/tasks`;
+
+       return ConfigServer.host  + "/api/tasks";
+
+ 
+        //"http://192.168.2.206:3000/api/tasks";
     };
 }());
 

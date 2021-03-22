@@ -2,6 +2,9 @@ import ScratchStorage from 'scratch-storage';
 
 import defaultProject from './default-project';
 
+import ConfigServer from '../config_server';
+
+
 /**
  * Wrapper for ScratchStorage which adds default web sources.
  * @todo make this more configurable
@@ -58,8 +61,10 @@ class Storage extends ScratchStorage {
         var url = `${this.assetHost}/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;
         console.log("asset2",url);
 
-      return "http://192.168.2.206:3000/api/tasks";
-       // `${this.assetHost}/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;
+      return ConfigServer.host + "/api/tasks";
+    //   `${this.assetHost}/api/tasks`;
+     // "http://192.168.2.206:3000/api/tasks";
+     /* `${this.assetHost}/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;*/
     }
     getAssetCreateConfig (asset) {
 

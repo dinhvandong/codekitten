@@ -141,7 +141,8 @@ class LibraryItem extends React.PureComponent {
     }
     render () {
         const iconMd5 = this.curIconMd5();
-        const iconURL = "http://192.168.2.206:3000/api/tasks";
+        const iconURL = ConfigServer.host  + "/api/tasks";
+        //"http://192.168.2.206:3000/api/tasks";
        
         return (
             <LibraryItemComponent
