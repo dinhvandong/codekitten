@@ -7,7 +7,7 @@ import styles from './sprite-selector-item.css';
 import { ContextMenuTrigger } from 'react-contextmenu';
 import { DangerousMenuItem, ContextMenu, MenuItem } from '../context-menu/context-menu.jsx';
 import { FormattedMessage } from 'react-intl';
-import scratchLogo from './logo-teky.png';
+import minion from './minion.png';
 let iconRawURL = 'https://cgfrog.com/wp-content/uploads/2014/04/Donald-Duck-Mickey-Mouse-DeviantArt-Donald-Duck-PNG.png';
 
 // react-contextmenu requires unique id to match trigger and context menu
@@ -38,7 +38,7 @@ const SpriteSelectorItem = props => (
                     <img
                         className={styles.spriteImage}
                         draggable={false}
-                        src={props.costumeURL}
+                         src={props.costumeURL}
                     />
                 </div>
             </div>

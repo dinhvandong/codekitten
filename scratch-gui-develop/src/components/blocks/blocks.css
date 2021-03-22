@@ -38,7 +38,7 @@
 
 .blocks :global(.blocklyMainBackground) {
     stroke: none;
-    background-color: #282c2c;
+    background-color: #2d365d;
     opacity: 0.85;
 
 
@@ -63,12 +63,12 @@
     border-right: none;
     opacity: 0.85;
 
-    border-left: 1px solid #282c2c ;
+    border-left: 1px solid #2d365d ;
 }
 
 .blocks :global(.blocklyToolboxDiv::-webkit-scrollbar) {
     display: none;
-    background-color: #282c2c;
+    background-color: #2d365d;
     opacity: 0.85;
 
 }
@@ -82,7 +82,7 @@
     border-right: none;
     opacity: 0.85;
 
-    border-left: 1px solid #282c2c;
+    border-left: 1px solid #2d365d;
 }
 
 

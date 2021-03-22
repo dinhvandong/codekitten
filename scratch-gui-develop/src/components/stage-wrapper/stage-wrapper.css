@@ -5,11 +5,17 @@
 .stage-wrapper * {
     box-sizing: border-box;
 
+     /* color: #46dddd;  */
+     opacity: 0.995;
+
 }
 
 .stage-canvas-wrapper {
     /* Hides negative space between edge of rounded corners + container, when selected */
     user-select: none;
+    /* background-color: #282c2c; */
+    /* opacity: 0.5; */
+
 }
 
 .stage-wrapper.full-screen {
@@ -19,7 +25,7 @@
     right: 0;
     bottom: 0;
     z-index: $z-index-stage-wrapper-overlay;
-    background-color: #282c2c;
+    background-color: #222945;
     opacity: 0.85;
 
     /* spacing between stage and control bar (on the top), or between

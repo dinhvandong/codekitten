@@ -21,7 +21,8 @@ const getBackpackContents = ({
 }) => new Promise((resolve, reject) => {
     xhr({
         method: 'GET',
-        uri: `${host}/${username}?limit=${limit}&offset=${offset}`,
+        uri: '',
+        //`${host}/${username}?limit=${limit}&offset=${offset}`,
         headers: {'x-token': token},
         json: true
     }, (error, response) => {

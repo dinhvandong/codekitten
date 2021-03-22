@@ -21,13 +21,13 @@ const ShareButton = ({
     >
         {isShared ? (
             <FormattedMessage
-                defaultMessage="Shared"
-                description="Label for shared project"
+                defaultMessage="Save"
+                description="Label for save project"
                 id="gui.menuBar.isShared"
             />
         ) : (
             <FormattedMessage
-                defaultMessage="Share"
+                defaultMessage="Save"
                 description="Label for project share button"
                 id="gui.menuBar.share"
             />

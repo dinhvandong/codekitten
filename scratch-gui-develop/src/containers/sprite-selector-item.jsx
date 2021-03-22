@@ -44,9 +44,10 @@ class SpriteSelectorItem extends React.PureComponent {
         this.dragRecognizer.reset();
     }
     getCostumeData () {
-        if (this.props.costumeURL) return this.props.costumeURL;
-        if (!this.props.asset) return null;
+        // if (this.props.costumeURL) return this.props.costumeURL;
+        // if (!this.props.asset) return null;
 
+        // console.log("getCostumeUrl:"+ this.props.costumeURL);
         return getCostumeUrl(this.props.asset);
     }
     handleDragEnd () {
@@ -88,6 +89,8 @@ class SpriteSelectorItem extends React.PureComponent {
         e.preventDefault();
         if (!this.noClick) {
             this.props.onClick(this.props.id);
+
+            console.log("CustomData:"+this.props.id);
         }
     }
     handleDelete (e) {

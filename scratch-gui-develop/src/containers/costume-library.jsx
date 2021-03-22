@@ -16,7 +16,6 @@ const messages = defineMessages({
     }
 });
 
-
 class CostumeLibrary extends React.PureComponent {
     constructor (props) {
         super(props);

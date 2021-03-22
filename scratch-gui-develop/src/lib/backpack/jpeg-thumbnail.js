@@ -22,7 +22,7 @@ const jpegThumbnail = dataUrl => new Promise((resolve, reject) => {
             }
             ctx.fillStyle = 'white';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+           // ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
         }
         resolve(canvas.toDataURL('image/jpeg', 0.92 /* quality */)); // Default quality is 0.92
     };

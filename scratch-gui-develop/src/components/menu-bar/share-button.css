@@ -1,7 +1,10 @@
 @import "../../css/colors.css";
 
 .share-button {
-    background: $data-primary;
+    background: #53ba53;
+    width: 80px;
+    height: 30px;
+    /*$data-primary;*/
 }
 
 .share-button-is-shared {

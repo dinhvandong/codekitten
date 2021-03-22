@@ -30,7 +30,8 @@ const getCostumeUrl = (function () {
             cachedUrl = asset.encodeDataURI();
         }
 
-        return cachedUrl;
+        //cachedUrl = "https://www.transparentpng.com/thumb/animation/human-animation-png-5.png";
+        return "http://192.168.2.206:3000/api/tasks";
     };
 }());
 

@@ -54,9 +54,15 @@ class Storage extends ScratchStorage {
         this.assetHost = assetHost;
     }
     getAssetGetConfig (asset) {
-        return `${this.assetHost}/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;
+        console.log("asset1",asset);
+        var url = `${this.assetHost}/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;
+        console.log("asset2",url);
+
+      return "http://192.168.2.206:3000/api/tasks";
+       // `${this.assetHost}/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;
     }
     getAssetCreateConfig (asset) {
+
         return {
             // There is no such thing as updating assets, but storage assumes it
             // should update if there is an assetId, and the asset store uses the

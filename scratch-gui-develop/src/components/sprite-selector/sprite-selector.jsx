@@ -124,15 +124,18 @@ const SpriteSelectorComponent = function (props) {
                         fileChange: onSpriteUpload,
                         fileInput: spriteFileInput,
                         fileMultiple: true
-                    }, {
+                    }, 
+                    {
                         title: intl.formatMessage(messages.addSpriteFromSurprise),
                         img: surpriseIcon,
                         onClick: onSurpriseSpriteClick // TODO need real function for this
-                    }, {
+                    }, 
+                    {
                         title: intl.formatMessage(messages.addSpriteFromPaint),
                         img: paintIcon,
                         onClick: onPaintSpriteClick // TODO need real function for this
-                    }, {
+                    }, 
+                    {
                         title: intl.formatMessage(messages.addSpriteFromLibrary),
                         img: searchIcon,
                         onClick: onNewSpriteClick

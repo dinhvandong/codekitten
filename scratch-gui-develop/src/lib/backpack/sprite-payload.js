@@ -17,7 +17,8 @@ const spritePayload = (id, vm) => {
             thumbnail: ''
         };
 
-        const costumeDataUrl = target.sprite.costumes[target.currentCostume].asset.encodeDataURI();
+        const costumeDataUrl = "";
+        // target.sprite.costumes[target.currentCostume].asset.encodeDataURI();
 
         return jpegThumbnail(costumeDataUrl).then(thumbnail => {
             payload.thumbnail = thumbnail.replace('data:image/jpeg;base64,', '');

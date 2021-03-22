@@ -35,6 +35,23 @@ class LibraryItem extends React.PureComponent {
     handleClick (e) {
         if (!this.props.disabled) {
             this.props.onSelect(this.props.id);
+            // console.log("this.props.bluetoothRequired:"+this.props.bluetoothRequired);
+            // console.log("this.props.collaborator:"+this.props.collaborator);
+            // console.log("this.props.description:"+tthis.props.description);
+            // console.log("this.props.disabled:"+this.props.bluetoothRequired);
+            // console.log("this.props.extensionId:"+this.props.bluetoothRequired);
+            // console.log("this.props.featured:"+this.props.bluetoothRequired);
+            // console.log("this.props.hidden:"+this.props.bluetoothRequired);
+            // console.log("this.props.icons:"+this.props.icons);
+            // console.log("this.props.id:"+this.props.id);
+            // console.log("this.props.insetIconURL:"+this.props.insetIconURL);
+            // console.log("this.props.internetConnectionRequired:"+this.props.internetConnectionRequired);
+            // console.log("this.props.name:"+this.props.name);
+            // console.log("this.props.showPlayButton:"+this.props.showPlayButton);
+            let json = JSON.stringify(this.props.icons[0]);
+            console.log("this.props.icons:"+ json);
+            //this.props.insetIconURL
+            console.log("this.props.insetIconURL:"+ this.props.insetIconURL);
         }
         e.preventDefault();
     }
@@ -47,7 +64,26 @@ class LibraryItem extends React.PureComponent {
         if (e.key === ' ' || e.key === 'Enter') {
             e.preventDefault();
             this.props.onSelect(this.props.id);
+            console.log("this.props.insetIconURL:"+ this.props.insetIconURL);
         }
+    }
+    componentDidUpdate()
+    {
+
+        // const iconMd5 = this.curIconMd5();
+        // const iconURL = 
+        // //"http://192.168.2.206:3000/api/tasks";
+        //  iconMd5 ?
+        //     `https://cdn.assets.scratch.mit.edu/internalapi/asset/${iconMd5}/get/` :
+        //      this.props.iconRawURL;
+            //  console.log("iconURL:"+ iconURL);
+            //  console.log("iconMd5:"+ iconMd5);
+            //  console.log("iconRawURL:"+ this.props.iconRawURL);
+            // let json = JSON.stringify(this.props.icons[0]);
+            //  console.log("this.props.icons:"+ json);
+            //  //this.props.insetIconURL
+
+           
     }
     handleMouseEnter () {
         // only show hover effects on the item if not showing a play button
@@ -105,9 +141,8 @@ class LibraryItem extends React.PureComponent {
     }
     render () {
         const iconMd5 = this.curIconMd5();
-        const iconURL = iconMd5 ?
-            `https://cdn.assets.scratch.mit.edu/internalapi/asset/${iconMd5}/get/` :
-            this.props.iconRawURL;
+        const iconURL = "http://192.168.2.206:3000/api/tasks";
+       
         return (
             <LibraryItemComponent
                 bluetoothRequired={this.props.bluetoothRequired}
@@ -120,7 +155,7 @@ class LibraryItem extends React.PureComponent {
                 iconURL={iconURL}
                 icons={this.props.icons}
                 id={this.props.id}
-                insetIconURL={this.props.insetIconURL}
+                insetIconURL={iconURL}
                 internetConnectionRequired={this.props.internetConnectionRequired}
                 isPlaying={this.props.isPlaying}
                 name={this.props.name}

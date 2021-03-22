@@ -11,7 +11,7 @@
     border-top-right-radius: $space;
     border-top-left-radius: $space;
     border-color: $ui-black-transparent;
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
     border-bottom: 0;
 }
@@ -122,6 +122,6 @@
 }
 
 .placeholder > .sprite {
-    background: black;
+    background: "#222945";
     filter: opacity(15%) brightness(0%);
 }

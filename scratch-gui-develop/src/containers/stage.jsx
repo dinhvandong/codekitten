@@ -63,6 +63,9 @@ class Stage extends React.Component {
             // Only attach a video provider once because it is stateful
             this.props.vm.setVideoProvider(new VideoProvider());
 
+            //this.canvas.fillStyle = "blue";
+            //this.canvas.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
             // Calling draw a single time before any project is loaded just makes
             // the canvas white instead of solid black–needed because it is not
             // possible to use CSS to style the canvas to have a different
@@ -246,6 +249,7 @@ class Stage extends React.Component {
                 return hex.length === 1 ? `0${hex}` : hex;
             };
             const colorString = `#${componentToString(r)}${componentToString(g)}${componentToString(b)}`;
+            console.log("ColorString:", colorString);
             this.props.onDeactivateColorPicker(colorString);
             this.setState({colorInfo: null});
             this.pickX = null;
@@ -323,6 +327,15 @@ class Stage extends React.Component {
         // On high-DPI devices, the canvas size in layout-pixels is not equal to the size of the extracted data.
         this.dragCanvas.style.width = `${boundsWidth}px`;
         this.dragCanvas.style.height = `${boundsHeight}px`;
+        //this.drawDragCanvas.style.backgroundColor = "blue";
+
+
+        this.dragCanvas.getContext('2d').fillStyle = 'rgba(217, 87, 83, 1)';
+        this.dragCanvas.getContext('2d').fillRect(10,10,500,500);
+        this.dragCanvas.getContext('2d').globalAlpha=0.6;
+
+       // this.dragCanvas.getContext('2d').drawImage(imageData,0,0);
+
 
         this.dragCanvas.getContext('2d').putImageData(imageData, 0, 0);
         // Position so that pick location is at (0, 0) so that  positionDragCanvas()
@@ -413,6 +426,7 @@ class Stage extends React.Component {
             onActivateColorPicker, // eslint-disable-line no-unused-vars
             ...props
         } = this.props;
+        console.log('StageComponent', this.canvas)
         return (
             <StageComponent
                 canvas={this.canvas}

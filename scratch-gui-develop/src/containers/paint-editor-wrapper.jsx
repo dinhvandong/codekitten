@@ -50,9 +50,9 @@ class PaintEditorWrapper extends React.Component {
         return (
             <PaintEditor
                 {...componentProps}
-                image={vm.getCostume(selectedCostumeIndex)}
-                onUpdateImage={this.handleUpdateImage}
-                onUpdateName={this.handleUpdateName}
+                // image={vm.getCostume(selectedCostumeIndex)}
+                // onUpdateImage={this.handleUpdateImage}
+                // onUpdateName={this.handleUpdateName}
                 fontInlineFn={inlineSvgFonts}
             />
         );

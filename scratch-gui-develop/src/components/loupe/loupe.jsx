@@ -75,6 +75,7 @@ class LoupeComponent extends React.Component {
                 element="canvas"
                 height={colorInfo.height}
                 style={{
+                    backgroundColor:"#282c2c",
                     top: colorInfo.y - ((zoomScale * colorInfo.height) / 2),
                     left: colorInfo.x - ((zoomScale * colorInfo.width) / 2),
                     width: colorInfo.width * zoomScale,

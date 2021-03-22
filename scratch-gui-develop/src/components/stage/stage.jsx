@@ -10,10 +10,9 @@ import TargetHighlight from '../../containers/target-highlight.jsx';
 import GreenFlagOverlay from '../../containers/green-flag-overlay.jsx';
 import Question from '../../containers/question.jsx';
 import MicIndicator from '../mic-indicator/mic-indicator.jsx';
-import {STAGE_DISPLAY_SIZES} from '../../lib/layout-constants.js';
-import {getStageDimensions} from '../../lib/screen-utils.js';
+import { STAGE_DISPLAY_SIZES } from '../../lib/layout-constants.js';
+import { getStageDimensions } from '../../lib/screen-utils.js';
 import styles from './stage.css';
-
 const StageComponent = props => {
     const {
         canvas,
@@ -39,15 +38,16 @@ const StageComponent = props => {
             <Box
                 className={classNames(
                     styles.stageWrapper,
-                    {[styles.withColorPicker]: !isFullScreen && isColorPicking})}
+                    { [styles.withColorPicker]: !isFullScreen && isColorPicking })}
                 onDoubleClick={onDoubleClick}
             >
                 <Box
                     className={classNames(
                         styles.stage,
-                        {[styles.fullScreen]: isFullScreen}
+                        { [styles.fullScreen]: isFullScreen }
                     )}
                     style={{
+                        backgroundColor:"#FFFFFF",
                         height: stageDimensions.height,
                         width: stageDimensions.width
                     }}
@@ -55,6 +55,7 @@ const StageComponent = props => {
                     <DOMElementRenderer
                         domElement={canvas}
                         style={{
+                            backgroundColor:"#282c2c",
                             height: stageDimensions.height,
                             width: stageDimensions.width
                         }}
@@ -77,12 +78,11 @@ const StageComponent = props => {
                         <Loupe colorInfo={colorInfo} />
                     ) : null}
                 </Box>
-
                 {/* `stageOverlays` is for items that should *not* have their overflow contained within the stage */}
                 <Box
                     className={classNames(
                         styles.stageOverlays,
-                        {[styles.fullScreen]: isFullScreen}
+                        { [styles.fullScreen]: isFullScreen }
                     )}
                 >
                     <div
@@ -101,7 +101,7 @@ const StageComponent = props => {
                         {question === null ? null : (
                             <div
                                 className={styles.questionWrapper}
-                                style={{width: stageDimensions.width}}
+                                style={{ width: stageDimensions.width }}
                             >
                                 <Question
                                     question={question}
@@ -110,12 +110,14 @@ const StageComponent = props => {
                             </div>
                         )}
                     </div>
+
                     <canvas
                         className={styles.draggingSprite}
                         height={0}
                         ref={dragRef}
                         width={0}
                     />
+
                 </Box>
                 {isStarted ? null : (
                     <GreenFlagOverlay
@@ -149,6 +151,6 @@ StageComponent.propTypes = {
     useEditorDragStyle: PropTypes.bool
 };
 StageComponent.defaultProps = {
-    dragRef: () => {}
+    dragRef: () => { }
 };
 export default StageComponent;
