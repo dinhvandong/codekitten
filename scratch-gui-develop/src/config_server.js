@@ -1,3 +1,3 @@
 import React from 'react';
-const  ConfigServer = {host:"http://192.168.2.206:3000"};
+const  ConfigServer = {host:"http://dev.codekitten.asia"};
 export default ConfigServer;
